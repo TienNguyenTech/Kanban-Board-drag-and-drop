@@ -168,33 +168,7 @@ $statusResult = $projectManagement->getAllStatus();
     </div>
     <a href="../kanban/add-task.php">Add Task</a>
 
-    <div class="status-card">
-        <div class="card-header">
-            <span class="card-header-text"><?php echo $statusRow["status_name"]; ?></span>
-        </div>
-        <ul class="sortable ui-sortable" id="sort<?php echo $statusRow["id"]; ?>"
-            data-status-id="<?php echo $statusRow["id"]; ?>">
-            <?php
-            if (!empty($taskResult)) {
-                foreach ($taskResult as $taskRow) {
-                    ?>
-                    <li class="text-row ui-sortable-handle" data-task-id="<?php echo $taskRow["id"]; ?>">
-                        <?php echo $taskRow["title"]; ?>
-                    </li>
-                    <?php
-                }
-            }
-            ?>
-        </ul>
-        
-        <!-- Add Task Button -->
-        <button class="add-task-btn" data-status-id="<?php echo $statusRow["id"]; ?>">Add Task</button>
-        <div class="add-task-form" id="add-task-form-<?php echo $statusRow["id"]; ?>" style="display: none;">
-            <input type="text" id="task-title-<?php echo $statusRow["id"]; ?>" placeholder="Enter task title">
-            <button class="save-task-btn" data-status-id="<?php echo $statusRow["id"]; ?>">Save</button>
-            
-        </div>
-    </div>
+  
 
     <!-- Connect with the edit-status.php to drag and drop -->
     <script>
@@ -219,47 +193,6 @@ $statusResult = $projectManagement->getAllStatus();
         });
     </script>
 
-<script>
-    $(document).ready(function () {
-        // Show the task input form when the Add Task button is clicked
-        $(".add-task-btn").click(function () {
-            var statusId = $(this).data("status-id");
-            $("#add-task-form-" + statusId).toggle();
-        });
-
-        // Save the new task when the Save button is clicked
-        $(".save-task-btn").click(function () {
-            var statusId = $(this).data("status-id");
-            var taskTitle = $("#task-title-" + statusId).val();
-
-            if (taskTitle.trim() !== "") {
-                $.ajax({
-                    url: 'add-task.php',
-                    method: 'POST',
-                    data: {
-                        status_id: statusId,
-                        title: taskTitle,
-                        description: "", // You can add description if needed
-                        project_name: "<?php echo $projectName; ?>" // Include project name
-                    },
-                    dataType: 'json',
-                    success: function (response) {
-                        if (response.success) {
-                            location.reload(); // Refresh the page to show the new task
-                        } else {
-                            alert("Failed to add task: " + response.message);
-                        }
-                    },
-                    error: function () {
-                        alert("An error occurred");
-                    }
-                });
-            } else {
-                alert("Please enter a task title.");
-            }
-        });
-    });
-</script>
 
 
 </body>

@@ -16,11 +16,13 @@ class ProjectManagement {
         }
     }
 
+    // Get all task statuses
     public function getAllStatus() {
         $stmt = $this->pdo->query('SELECT * FROM tbl_status ORDER BY id');
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    // Get tasks by project name and status ID
     public function getProjectTaskByStatus($statusId, $projectName) {
         $stmt = $this->pdo->prepare('
             SELECT * FROM tbl_task
@@ -34,6 +36,15 @@ class ProjectManagement {
         ]);
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
-    
+
+    // Update the task status (column move)
+    public function editTaskStatus($status_id, $task_id) {
+        $stmt = $this->pdo->prepare('UPDATE tbl_task SET status_id = :status_id WHERE id = :task_id');
+        $stmt->execute([
+            ':status_id' => $status_id,
+            ':task_id' => $task_id
+        ]);
+        return $stmt->rowCount();
+    }
 }
 ?>
