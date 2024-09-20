@@ -57,7 +57,7 @@ else:
             <label for="description">Description:</label><br>
             <textarea id="description" name="description" rows="4" cols="50"></textarea><br>
 
-            <label for="project_name">Project Name:</label><br>
+            <label for="project_name">Project Name (StartTuts):</label><br>
             <input type="text" maxlength="128" id="project_name" name="project_name"><br>
 
             <label for="status_id">Status ID:</label><br>
