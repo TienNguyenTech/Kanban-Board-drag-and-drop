@@ -8,7 +8,7 @@ $statusResult = $projectManagement->getAllStatus();
 <html>
 
 <head>
-    <title>Trello Like Drag and Drop Cards for Project Management Software</title>
+    <title>Kanban Board</title>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -136,7 +136,7 @@ $statusResult = $projectManagement->getAllStatus();
 </head>
 
 <body>
-    <h1>Drag and Drop Cards for Project Management Software</h1>
+    <h1>Kanban Board</h1>
     <div class="task-board">
         <?php
         foreach ($statusResult as $statusRow) {
