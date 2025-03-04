@@ -18,7 +18,7 @@ A sleek, intuitive project management tool with a Kanban-style drag-and-drop int
 
 ## 🛠️ Tech Stack
 - **Frontend:** HTML, CSS
-- **Backend:** Node.js, JavaScript
+- **Backend:** PHP, JSON, Node.js, JavaScript
 - **Database:** MySQL
 - **Deployment:** Figma
 
