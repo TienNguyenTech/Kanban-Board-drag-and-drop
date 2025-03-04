@@ -16,6 +16,7 @@
 <p><a href="./schools/index.php">Schools</a></p>
 <p><a href="./courses/index.php">Courses</a></p>
 <p><a href="./kanban/index.php">Kanban</a></p>
+<p><a href="./kanban2/index.php">Kanban2</a></p>
 <hr>
 <p><a href="login.php">Login</a></p>
 <p><a href="logout.php">Logout</a></p>
