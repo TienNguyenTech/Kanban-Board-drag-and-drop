@@ -2,11 +2,9 @@
 
 A sleek, intuitive project management tool with a Kanban-style drag-and-drop interface for efficient task organization and workflow management.
 
-## 🚀 Demo
-👉 [Live Demo](https://your-demo-link.com)
+## 🚀 Overview
 
-## 📸 Screenshots
-![Dashboard](./assets/dashboard.png)
+![Dashboard](assets/dashboard.png)
 
 ## 🔥 Features
 - 🖱️ **Drag & drop tasks** between columns
@@ -57,7 +55,5 @@ This project demonstrates:
 - **Practical project management logic**, making it a valuable real-world application.
 
 ## 📩 Connect with Me
-- 🌐 [Portfolio](https://your-portfolio.com)
-- 🔗 [LinkedIn](https://linkedin.com/in/tomng9)
 - 🐙 [GitHub](https://github.com/TienNguyenTech)
-- 📧 Email: tienng39@gmail.com
+
